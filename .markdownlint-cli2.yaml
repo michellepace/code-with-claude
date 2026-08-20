@@ -1,0 +1,19 @@
+gitignore: true
+
+config:
+  default: true     # Enable all rules by default
+
+  # false == RULE OFF
+  MD013: false      # enforce a maximum line length
+  MD024: false      # forbid duplicate heading content
+  MD026: true       # forbid trailing punctuation in headings
+  MD031: false      # require blank lines around code blocks
+  MD032: false      # require blank lines around lists
+  MD033: false      # forbid inline HTML
+  MD034: false      # forbid bare URLs
+  MD036: false      # forbid emphasis instead of a heading
+  MD040: false      # require language on fenced code blocks
+  MD041: true       # require first line to be H1 heading
+  MD046: false      # enforce consistent code block style
+  MD059: false      # require descriptive link text
+  
