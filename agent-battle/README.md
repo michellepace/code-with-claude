@@ -155,7 +155,7 @@ my_agent.py        the AGENT = dict(...) block — your whole interface
 setup.sh           participant launcher (deps, server, bot, relay)
 host.sh            facilitator: self-hosted event server (fallback path)
 HOST.md            facilitator runbook
-CLAUDE.md          troubleshooting playbook (Claude Code reads this)
+.claude/CLAUDE.md  troubleshooting playbook (Claude Code reads this)
 .claude/commands/  /cwc-setup, /cwc-fix
 skills/            opt-in mining skill (a lever)
 bot/               mineflayer bot, MC server, relay client

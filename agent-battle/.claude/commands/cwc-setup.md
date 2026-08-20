@@ -56,13 +56,13 @@ If the last line is the boxed `OPEN THIS IN YOUR BROWSER` block →
 - You're standing by if anything breaks — they can type `/cwc-fix`
 
 If you see `✗` (a `die()` line) → **failure.** Match the error to the
-playbook in CLAUDE.md and remediate. Common cases:
+playbook in `.claude/CLAUDE.md` and remediate. Common cases:
 
 | Error pattern | Fix |
 |---|---|
 | `java not found` | macOS: `brew install openjdk@21 && sudo ln -sfn $(brew --prefix openjdk@21)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/`. Linux: `sudo apt install openjdk-21-jdk`. Then re-run. |
 | `npm install (bot) failed` | Likely a corp registry. Run `(cd bot && rm -rf node_modules package-lock.json && npm install --registry=https://registry.npmjs.org)` then re-run `./setup.sh`. |
-| `server failed — see /tmp/mc-server.log` | Read that log. If `Address already in use`: stale java holding :25565 → see CLAUDE.md "Killing leftovers". If `Unsupported class file`: Java too old, install 17+. |
+| `server failed — see /tmp/mc-server.log` | Read that log. If `Address already in use`: stale java holding :25565 → see `.claude/CLAUDE.md` "Killing leftovers". If `Unsupported class file`: Java too old, install 17+. |
 | `bot failed — see /tmp/mc-bot.log` | Read that log. Usually `Cannot find module` (npm install incomplete) or `ECONNREFUSED` (server not up yet — wait 10s, re-run). |
 | `bot did not register with the relay` | Read `/tmp/mc-bot.log`, look for `[relay]` lines. Check `curl $EVENT_URL/api/config` works from their machine. If the event server is fine but WebSockets can't connect, the venue network may block them — escalate to the facilitator. |
 | `event server failed` (SOLO mode) | Read `/tmp/event-local.log`. Usually a missing `(cd event && npm install)`. |

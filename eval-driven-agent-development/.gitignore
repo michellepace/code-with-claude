@@ -3,6 +3,5 @@ node_modules/
 .env
 *.tsbuildinfo
 .vscode/
-.claude/
 WORKSHOP.md
 runs-batch/
